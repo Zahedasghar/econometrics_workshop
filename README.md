@@ -1,1 +1,1 @@
-# aect-workshop-2022
+# Applied Econometrics Workshop 20202, School of Economics, QAU
