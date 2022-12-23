@@ -1,0 +1,55 @@
+---
+title: "Program/Impact Evaluation Tools <br> Applied Workshop in STATA & R "
+subtitle: "DAGs,DiD, RDD, IV, Matching (very soon)"
+footer: "[Zahid Asghar, QAU]{.yellow}"
+logo: "images/soe_logo.jpg"
+author: "By Zahid Asghar "
+date: ""
+format:
+  revealjs: 
+    slide-number: true
+    # chalkboard: 
+    #   buttons: false
+    preview-links: auto
+    theme: [simple, custom.scss]
+    title-slide-attributes:
+      data-background-color: "#cf3a36"
+resources:
+  - slides.pdf
+---
+```{r include=FALSE}
+library(tidyverse)
+library(httr)
+clrs <- MetBrewer::met.brewer(name = "Java")
+clrs_lt <- colorspace::lighten(clrs, 0.9)
+knitr::opts_chunk$set(fig.retina = 3, collapse = TRUE)
+options(digits = 3, width = 75)
+```
+
+# Program/Impact Evaluation Key Tools {background-color="`r clrs[1]`" .white}
+
+
+# Health Insurance Subsidy Program Data {background-color="`r clrs[1]`"}
+
+# Resource Person
+
+![](images/zahid.jpg)
+::: {style="text-align: center;"}
+Prof.Dr. Zahid Asghar
+:::
+
+# How can we help researchers better use their conceptual knowledge and skills to analyze real-world data?{ .center .middle}
+
+## Outline 
+
+### - Directed Acyclical Graphs
+
+### - [Difference in Differences Estiamtors]{.yellow}
+
+### - Instrumental Variable and its 3 key assumptions
+
+### - [Regression Discontinuity Design]{.yellow} 
+
+### - Matching 
+
+### - [Application of all these tools on Health Insurance Subsidy Program data]{.yellow} 
