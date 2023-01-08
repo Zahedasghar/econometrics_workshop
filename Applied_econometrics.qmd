@@ -1,6 +1,6 @@
 ---
-title: "Program/Impact Evaluation Tools <br> Applied Workshop in STATA & R "
-subtitle: "DAGs,DiD, RDD, IV, Matching (very soon)"
+title: "Program/Impact Evaluation Tools <br> in STATA & R "
+subtitle: "Regression,DiD, RDD, IV, Matching "
 footer: "[Zahid Asghar, QAU]{.yellow}"
 logo: "images/soe_logo.jpg"
 author: "By Zahid Asghar "

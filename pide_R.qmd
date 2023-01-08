@@ -1,0 +1,179 @@
+---
+title: "How R and Quarto learning boosts research productivity"
+
+author: "Zahid Asghar"
+date: "12 Jan, 2023"
+format:
+  revealjs: 
+    slide-number: true
+    # chalkboard: 
+    #   buttons: false
+    preview-links: auto
+    theme: [simple, custom.scss]
+    title-slide-attributes:
+      data-background-color: "#cf3a36"
+resources:
+  - slides.pdf
+---
+```{r include=FALSE}
+library(tidyverse)
+library(httr)
+clrs <- MetBrewer::met.brewer(name = "Java")
+clrs_lt <- colorspace::lighten(clrs, 0.9)
+knitr::opts_chunk$set(fig.retina = 3, collapse = TRUE)
+options(digits = 3, width = 75)
+```
+
+
+## About me
+
+::: columns
+::: {.column width="30%"}
+![Prof.Dr. Zahid Asghar](images/zahid.jpg){width="600"}
+:::
+
+::: {.column width="70%"}
+::: nonincremental
+-   Student of:
+    -   Applied Econometrics
+    -   Data Analytics
+    -   Development Economics
+    -   R, STATA, Excel
+    -   Urban Economics
+    -   Skills for jobs of today and tomorrow
+-   Research interests : data for policy, development economics , Applied Econometrics
+:::
+:::
+:::
+
+## Learning… {background-color="`r clrs[1]`" .white}
+
+
+### -   [You don’t “learn R”, you learn how to do things in R]{.yellow}
+
+### -   In order to do learn this, you need to learn how to search for what you want to do
+
+### -   [Quarto for beautiful documents (pdf, word, html, pptx, revealjs, beamer, website, blogs, book/thesis/reports)]{.yellow}
+
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(kableExtra)
+library(patchwork)
+library(fontawesome)
+library(gapminder)
+library(scales)
+```
+
+
+
+## R {background-color="`r clrs[1]`" .white}
+
+
+::: columns
+::: {.column width="50%"}
+-   **Free** and **open source**
+
+-   A very large community
+
+-   Can handle virtually any data format
+
+-   Makes replication easy
+
+-   Can integrate into documents (with `Quarto`)
+
+-   R is a *language* so it can do *everything*
+
+    -   A good stepping stone to learning other languages like *Python*
+:::
+
+::: {.column width="50%"}
+![](images/r.png)
+:::
+:::
+
+## Excel (or Stata) Can't Do This {background-color="`r clrs[1]`" .white}
+
+
+::: panel-tabset
+## Code
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot(data = gapminder, 
+       aes(x = gdpPercap,
+           y = lifeExp,
+           color = continent))+
+  geom_point(alpha=0.3)+
+  geom_smooth(method = "lm")+
+	scale_x_log10(breaks=c(1000,10000, 100000),
+	              label=scales::dollar)+
+	labs(x = "GDP/Capita",
+	     y = "Life Expectancy (Years)")+
+  facet_wrap(~continent)+
+  guides(color = F)+
+  theme_light()
+```
+
+## Output 
+
+```{r}
+#| echo: false
+#| eval: true
+ggplot(data = gapminder, 
+       aes(x = gdpPercap,
+           y = lifeExp,
+           color = continent))+
+  geom_point(alpha=0.3)+
+  geom_smooth(method = "lm")+
+	scale_x_log10(breaks=c(1000,10000, 100000),
+	              label=scales::dollar)+
+	labs(x = "GDP/Capita",
+	     y = "Life Expectancy (Years)")+
+  facet_wrap(~continent)+
+  guides(color = F)+
+  theme_light()
+```
+:::
+
+## Or This {background-color="`r clrs[1]`" .white}
+
+::: panel-tabset
+### Input
+
+The average GDP per capita is `` ` r dollar(mean(gapminder$gdpPercap)) ` `` with a standard deviation of `` ` r dollar(sd(gapminder$gdpPercap)) ` ``.
+
+### Output
+
+The average GDP per capita is `r dollar(mean(gapminder$gdpPercap))` with a standard deviation of `r dollar(sd(gapminder$gdpPercap))`.
+:::
+
+## Or This {background-color="`r clrs[1]`" .white}
+
+```{r}
+#| echo: true
+#| fig-width: 18
+#| fig-align: center
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = 73.1387, lat =33.7492 ,
+             popup = "School of Economics, QAU, Islamabad")
+```
+
+# Training Outline {background-color="`r clrs[1]`" .white}
+
+## {background-color="`r clrs[1]`" .white}
+
+### Meet R 
+
+### Data Wrangling 
+
+### Data Visualization 
+
+### Learn Having Beautiful Regression Models 
+
+### Learn to create beautiful documentation in Quarto
