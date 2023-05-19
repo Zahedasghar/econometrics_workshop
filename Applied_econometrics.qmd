@@ -1,9 +1,9 @@
 ---
-title: "Program/Impact Evaluation Tools <br> in STATA & R "
-subtitle: "Regression,DiD, RDD, IV, Matching "
-footer: "[Zahid Asghar, QAU]{.yellow}"
-logo: "images/soe_logo.jpg"
-author: "By Zahid Asghar "
+title: "[Advanced ]{.yellow} <br> Econometrics"
+subtitle: "University of Sargodah <br> 6-7 Feb 2023 "
+#footer: "[Zahid Asghar, QAU]{.yellow}"
+#logo: "images/soe_logo.jpg"
+author: "Zahid Asghar"
 date: ""
 format:
   revealjs: 
@@ -11,12 +11,14 @@ format:
     # chalkboard: 
     #   buttons: false
     preview-links: auto
-    theme: [simple, custom.scss]
+    theme: [simple,custom.css, custom.scss]
     title-slide-attributes:
-      data-background-color: "#cf3a36"
-resources:
-  - slides.pdf
+      data-background-image: "images/uos.png"
+      data-background-size: 45%
+      data-background-position: 98% 90%
+      data-background-color: "#9fe0da"
 ---
+
 ```{r include=FALSE}
 library(tidyverse)
 library(httr)
@@ -26,21 +28,17 @@ knitr::opts_chunk$set(fig.retina = 3, collapse = TRUE)
 options(digits = 3, width = 75)
 ```
 
-# Program/Impact Evaluation Key Tools {background-color="`r clrs[1]`" .white}
+# Program/Impact Evaluation Key Tools {.white background-color="`r clrs[1]`"}
 
-
-# Health Insurance Subsidy Program Data {background-color="`r clrs[1]`"}
+# Health Insurance Subsidy Program Data {background-color="`r clrs_lt[1]`"}
 
 # Resource Person
 
-![](images/zahid.jpg)
-::: {style="text-align: center;"}
-Prof.Dr. Zahid Asghar
-:::
+![](images/zahid.jpg) ::: {style="text-align: center;"} Prof.Dr. Zahid Asghar :::
 
-# How can we help researchers better use their conceptual knowledge and skills to analyze real-world data?{ .center .middle}
+# How can we help researchers better use their conceptual knowledge and skills to analyze real-world data? {.center .middle}
 
-## Outline 
+## Outline
 
 ### - Directed Acyclical Graphs
 
@@ -48,8 +46,8 @@ Prof.Dr. Zahid Asghar
 
 ### - Instrumental Variable and its 3 key assumptions
 
-### - [Regression Discontinuity Design]{.yellow} 
+### - [Regression Discontinuity Design]{.yellow}
 
-### - Matching 
+### - Matching
 
-### - [Application of all these tools on Health Insurance Subsidy Program data]{.yellow} 
+### - [Application of all these tools on Health Insurance Subsidy Program data]{.yellow}

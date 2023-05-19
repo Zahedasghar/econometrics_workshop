@@ -1,11 +1,10 @@
 ---
 title: "How R and Quarto learning boosts research productivity"
-
 author: "Zahid Asghar"
 date: "12 Jan, 2023"
 format:
   revealjs: 
-    slide-number: true
+    slide-number: false
     # chalkboard: 
     #   buttons: false
     preview-links: auto
@@ -25,26 +24,33 @@ options(digits = 3, width = 75)
 ```
 
 
-## About me
+## Econfest میں کیوں شامل ہوں   {background-color="red"}
+ 
 
 ::: columns
-::: {.column width="30%"}
-![Prof.Dr. Zahid Asghar](images/zahid.jpg){width="600"}
+::: {.column width="45%"}
+![ Apney Lahore mein](docs/images/econfest.jpg){width="600"}
 :::
 
-::: {.column width="70%"}
+::: {.column width="55%"}
 ::: nonincremental
--   Student of:
-    -   Applied Econometrics
-    -   Data Analytics
-    -   Development Economics
-    -   R, STATA, Excel
-    -   Urban Economics
-    -   Skills for jobs of today and tomorrow
--   Research interests : data for policy, development economics , Applied Econometrics
+-   حصہ بنیں :
+    -    معیشت پر عام فہم  گپ شپ
+    -   طلباء کے لیے حقیقی مسائل پر تحقیق کے لیے گفتگو کے مواقع
+    -   مختلف شعبوں سے تعلق رکھنے والے سرکردہ اسکالرز ایک ہی چھت کے نیچے جامع بحث
+    -   فکری میلوں کی طرف ایک اہم قدم 
+    -   تعلیمی اداروں کے درمیان تعاون 
+    -   اور بہت کچھ
 :::
 :::
 :::
+
+##   {background-color="black" background-image="docs/images/econfest.jpg" background-size="200px" background-repeat="repeat"}
+
+
+
+
+
 
 ## Learning… {background-color="`r clrs[1]`" .white}
 

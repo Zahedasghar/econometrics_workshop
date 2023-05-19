@@ -1,12 +1,13 @@
 ---
-title: "[Program/Impact Evaluation Tools <br> Workshop in STATA & R]{.yellow} "
-subtitle: "RCTs,DiD, RDD, IV, Matching"
+title: "[Program/Impact Evaluation Tools  in STATA & R]{.yellow} "
+title-block-banner: true
+subtitle: "RCTs,DiD, RDD, IV, PSM"
 footer: "[Zahid Asghar](https://zahidasghar.com)"
 logo: "images/soe_logo.jpg"
-author: "[[University of Sargodah](https://su.edu.pk/department/economics)]{.yellow}"
+author: "[[By Atomcamp](https://www.atomcamp.com/)]{.yellow}"
 date: ""
 format:
-  revealjs: 
+  revealjs:  
     slide-number: true
     # chalkboard: 
     #   buttons: false
@@ -16,7 +17,8 @@ format:
       #data-background-color: "#495efc"
 resources:
   - slides.pdf
----
+--- 
+
 ```{r include=FALSE}
 library(tidyverse)
 library(httr)
@@ -29,21 +31,16 @@ options(digits = 3, width = 75)
 # Learn Program/Impact Evaluation Key Tools in Practice { .white}
 
 
-# Health Insurance Subsidy Program Data 
-
-# Resource Person
+## Resource Person
 
 ![](images/zahid.jpg)
-::: {style="text-align: center;"}
-Prof.Dr. Zahid Asghar
-:::
 
-# How can we help researchers better use their conceptual knowledge and skills to analyze real-world data?{ .center .middle}
-## Course Overview {.scrollable}
 
-This training workshop is designed to enable [particpants to focus on research design]{.yellow}, [thinking clearly with data]{.yellow} and learn [program/impact evaluation tools]{.yellow} with real life data applications through computer-based exercises and learn to replicate the econometric results of published economics articles like Card and Krueger (1994). Philosophy of the course will be to engage participants in doing economics through computer assisted tools. [Main software for the course will be STATA and R]{.yellow} with all programs/slides available for each topic after the training. Following are books for the training. 
+## Course Overview 
 
--   [Mastering metrics: Path from cause to effect](https://www.masteringmetrics.com/)
+This couse is designed to enable [participants to focus on research design]{.yellow}, [thinking clearly with data]{.yellow} and learn [program/impact evaluation tools]{.yellow} with real life data applications through computer-based exercises and learn to replicate the results of published economics articles like Card and Krueger (1994). Philosophy of the course will be to engage participants in doing program evaluation through computer assisted tools. [Main software for the course will be STATA and R]{.yellow} with all programs/slides available for each topic after the training. Following are books for the training. 
+
+-   [Mastering metrics: Path from cause to effect By Noble Laureate](https://www.masteringmetrics.com/)
 
 -   [The Effect](theeffectbook.net)
 
@@ -51,31 +48,32 @@ This training workshop is designed to enable [particpants to focus on research d
 
 ## [Objectives of the workshop]{.yellow} {.scrollable}
 
--   Learning 5 furious tools in econometrics:Randomization, IV, DID, RDD and Matching 
+-   Learning tools for program evaluation :Randomization, IV, DID, RDD and Matching 
 
--   Understanding concept of control variables, confounder and colliders
+-   Use of Health Insurance Subsidy Program data with application using STATA and R 
 
--   Apply all these tools on Health Insurance Subsidy Program and some well know published articles including nobel laureates
+-   Reproducing some well know published articles including noble laureates
 
--   Read, understand, and evaluate empirical papers in professional journals
+-   Read, understand, and evaluate empirical studies on program evaluation
 
-By the end of three (if reduced to two, some topics will be skipped) days workshop, participants will be familiar with tools to be applied for program evaluation and better understand research design.
+By the end of this course, participants will be familiar with tools to be applied for program evaluation and better understand research design.
 
 ## Outline 
 
-###  Program/Impact Evaluation Overview
+####  Program/Impact Evaluation Overview
 
-###  [Difference in Differences Estiamtors]{.yellow}
+####  [Difference in Differences Estiamtors]{.yellow} 
 
-###  Instrumental Variable and its 3 key assumptions
+####  Instrumental Variable 
 
-###  [Regression Discontinuity Design]{.yellow} 
+####  [Regression Discontinuity Design]{.yellow} 
 
-###  Matching and Randomization
+####  Matching and Randomization
 
-###  [Application of all these tools on Health Insurance Subsidy Program data]{.yellow} 
+####  [Application of all these tools on Health Insurance Subsidy Program and other data]{.yellow} 
 
-## 
+## Resources 
+
 Both books are freely available with complete codes in STATA and R. 
 
 ::: columns

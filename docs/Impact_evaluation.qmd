@@ -1,0 +1,237 @@
+---
+format:
+  revealjs: 
+    theme: [ custom.css, styles.scss]
+    #filters:
+    #  - reveal-auto-agenda
+    #  - lightbox
+    auto-agenda:
+      bullets: numbered
+      heading: Agenda
+    transition: fade
+    background-transition: fade
+    chalkboard: true
+    highlight-style: pygments
+    footer: "https://zahedasghar.netlify.app"
+    #title-slide-attributes:
+      #data-background-image: images/hexes.png
+      #data-background-size: cover
+    
+execute:
+  echo: false
+  warning: false
+  freeze: auto
+editor: visual
+---
+
+##  {.title}
+
+::: r-fit-text
+[Impact Evaluation Tools]{.flow} <br> using R and STATA
+:::
+
+::: {style="font-size: 80px"}
+Zahid Asghar
+:::
+
+Professor, School of Economics
+
+::: notes
+Hi everybody! Thank you so much for joining this course. I am so excited to introduce tools for *Impact Evaluation or Program Evaluation*.
+:::
+
+```{r include=FALSE}
+library(tidyverse)
+library(httr)
+clrs <- MetBrewer::met.brewer(name = "Java")
+clrs_lt <- colorspace::lighten(clrs, 0.9)
+knitr::opts_chunk$set(fig.retina = 3, collapse = TRUE)
+options(digits = 3, width = 75)
+```
+
+# IE is part of a broader agenda of evidence-based policy making and reshaping public policy with a focus on outcomes and results. {background-color="lightgreen"}
+
+## Why Evaluate {background-color="lightgreen"}
+
+::: incremental
+-   Development programs and policies to change O/C
+    -   raising income
+    -   improving learning
+    -   reducing illness
+    -   reducing poverty
+
+> -   Whether or not these changes are actually achieved is a cruicial public policy question, but one that is not often examined.
+:::
+
+##  {background-color="lightgreen"}
+
+::: incremental
+-   Focus on assessing program outcomes not on measuring programs
+-   IE *evidence-based policy making*
+-   shift in focus from outcomes and results , reshaping public policy
+-   set and track national targets, programs managers
+-   quality, efficiency and effectiveness of policies and programs at various stages of implementation
+-   ministries compete each other for finance
+-   Evidence : accountability and transparency
+:::
+
+::: notes
+-   Growing global trend of shift : shift in focus from outcomes and results , and is reshaping public policy
+-   Results not only to set and track national and international targets, but results are increasingly used by, and reuqired of program managers to enhance accountability, determine budget allocations, and guide program design and evaluation
+:::
+
+##  {background-color="lightgreen"}
+
+### IE at the center
+
+::: incremental
+-   Robust evidence for
+
+    -   greater accountability
+    -   innovation and
+    -   learning
+
+-   what does and does not work to reduce poverty and improve welfare
+
+-   [Central question : causal relationship between the program and the outcome of interest]{style="color:orange;"}
+:::
+
+##  {background-color="lightgreen"}
+
+### Mexcico's CCT Progresa
+
+23% reduction in illness in children Reduced stunting by 1 cm per year for children in age 12-36 months Program exapnd for upper-middle school scholarships and enhanced health programs for adolescents
+
+### Mozambique
+
+Policy Impact of an Innovative Preschool Model Preschool and Early Childhood Development in Mozambique ::: incremental - 24% more likely to enroll in primary school - 10% more likely to enroll at right age :::
+
+::: notes
+-   1990s Poor households support with objective to increase short-term income support and to increase incentives for investmentsin children's human capital,
+:::
+
+## What is Impact Evaluation {background-color="lightgreen"}
+
+### Monitoring
+
+A continuous process - tracking progress : inputs, activities and outputs
+
+### Evaluations
+
+Periodic with objective assessments of a planned, ongoing, or completed project, program or policy. [3 types of questions]{style="color:red;"}
+
+##  {background-color="lightgreen"}
+
+::: incremental
+-   Descriptive questions: what is taking place
+    -   concerned with processes, conditions, organizational relationships , and stakeholders views.
+-   Normative questions: what is taking place to what is taking place
+    -   Assess activities and whether or not targets are accomplishments.
+    -   concerned with inputs, activities, and outputs
+-   Cause and effect questions focus on attributions
+-   what difference the intervention makes to outcomes
+:::
+
+# Key concept: IEs seek to answer one particular type of question: what is the impact (or causal effect) of a program on an outcome of interest? {background-color="lightgreen"}
+
+## Questions {background-color="lightgreen"}
+
+::: incremental
+-   Did saaf pani project increased access to safe water and improve health otucomes?
+-   Has export promotions and duty exemptions raised export?
+-   Did a new curriculum raise test scores among students?
+-   Was NIC and BIC successful in fostering entrepreneurship and raising income?
+:::
+
+> -   In each of these questions, IE provides information whether the program caused the desired outcomes as contrasted with specific case studies or anecdotes.
+
+##  {background-color="lightgreen"}
+
+> Well designed and well-implemented IEs are able to provide convincing and comprehensive evidence that can be used to inform policy decision, shape public opinion and improve program operations.
+
+# Counterfactual (treatment and control) {background-color="lightgreen"}
+
+## IE methods choice depends on operational characteristics {background-color="lightgreen"}
+
+::: incremental
+-   Does your program have resources to serve all eligible beneficiaries?
+
+-   Is your program targeted or universal?
+
+-   Will your program rolled out to all beneficiaries at once or in sequence?
+
+-   What is impact of on GST after provinces were given this task?
+
+-   What is impact of billion Tsunami Trees impact on climate change?
+
+-   What is impact of Sehat Sahulat Health card on health outcomes?
+:::
+
+### Choice of tool depends on above three points
+
+# Prospective versus Retrospective Impact Evaluation {background-color="lightgreen"}
+
+::: notes
+baseline data are collected before program starts Retrospective: data collected once program is implemented
+:::
+
+# Decisions Whether to Carry Out an Impact Evaluation {background-color="lightgreen"}
+
+## Deciding whether to carry an Impact Evaluation {background-color="lightgreen"}
+
+::: incremental
+-   costly
+
+-   strong examination of causality
+
+-   Few basic questions for decision
+
+-   **Q 1 : What is at stake?**
+
+-   **Q 2 : Is there any evidence whether program works**
+
+-   **Q 3 : Do we have the resources for a good impact evaluation?**
+
+-   Resources: data, time, data, finance
+
+-   IE is combined effort by policy makers and researchers
+
+    > -   If you decide that an IE makes sense given the questions and the related need to examine causality, the stakes associated with the results , then be with us to learn tools of IE.
+:::
+
+## Outline
+
+**Program/Impact Evaluation Overview**
+
+[**Difference in Differences Estiamtors**]{style="color:orange;"}
+
+**Instrumental Variable**
+
+[**Regression Discontinuity Design**]{style="color:orange;"}
+
+**Matching and Randomization**
+
+[**Application of all these tools on Health Insurance Subsidy Program and other data**]{style="color:orange;"}
+
+## Data and codes
+
+-   Data from World Bank [download](https://github.com/lfbeisermcgrath/rimpactevaluation/blob/master/data/evaluation.dta) in STATA
+-   All slides
+-   [Reproducible files in R](https://lfbeisermcgrath.github.io/rimpactevaluation/intro.html)
+-   Reproducible files in STATA are available from main book *Impact Evaluation in Practice*
+
+## Books
+
+## Resources
+
+Both books are freely available with complete codes in STATA and R.
+
+::: columns
+::: {.column width="50%"}
+![[Impact evaluation in practice](https://www.worldbank.org/en/programs/sief-trust-fund/publication/impact-evaluation-in-practice)](images/impact_eval.jpg)
+:::
+
+::: {.column width="50%"}
+![[The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/)](images/the_effect.jpg)
+:::
+:::
