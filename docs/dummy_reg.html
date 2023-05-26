@@ -110,29 +110,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="simple-tabular-analysis">Simple Tabular Analysis</h2>
 <p>I am going calculate <code>mean</code> salary of <code>Male</code> and <code>Female</code> faculty as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Salaries <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">|&gt;</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_salary=</span><span class="fu">mean</span>(salary)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a>Salaries <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3" onclick="event.preventDefault();" href="">3</a><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_salary=</span><span class="fu">mean</span>(salary)) <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="4" onclick="event.preventDefault();" href="">4</a><span id="annotated-cell-2-4" class="code-annotation-target"><a href="#annotated-cell-2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-lines="1" data-code-cell="annotated-cell-2" data-code-annotation="1">Read Salaries data then use <code>pipe</code> operator</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-lines="2" data-code-cell="annotated-cell-2" data-code-annotation="2">group data by gender , use <code>pipe</code> opertor ( I read as pipe operator as <code>THEN</code>)</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-lines="3" data-code-cell="annotated-cell-2" data-code-annotation="3">summarise data , THEN</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-lines="4" data-code-cell="annotated-cell-2" data-code-annotation="4">use it as a nice table as <code>gt()</code></span>
+</dd>
+</dl>
+</div>
 <div class="cell-output-display">
 
-<div id="fzqpseonhd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fzqpseonhd table {
+<div id="cziddnxecp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cziddnxecp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fzqpseonhd thead, #fzqpseonhd tbody, #fzqpseonhd tfoot, #fzqpseonhd tr, #fzqpseonhd td, #fzqpseonhd th {
+#cziddnxecp thead, #cziddnxecp tbody, #cziddnxecp tfoot, #cziddnxecp tr, #cziddnxecp td, #cziddnxecp th {
   border-style: none;
 }
 
-#fzqpseonhd p {
+#cziddnxecp p {
   margin: 0;
   padding: 0;
 }
 
-#fzqpseonhd .gt_table {
+#cziddnxecp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -158,12 +178,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_caption {
+#cziddnxecp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fzqpseonhd .gt_title {
+#cziddnxecp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -175,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#fzqpseonhd .gt_subtitle {
+#cziddnxecp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -187,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#fzqpseonhd .gt_heading {
+#cziddnxecp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -199,13 +219,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_bottom_border {
+#cziddnxecp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_col_headings {
+#cziddnxecp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -220,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_col_heading {
+#cziddnxecp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -240,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fzqpseonhd .gt_column_spanner_outer {
+#cziddnxecp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -252,15 +272,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#fzqpseonhd .gt_column_spanner_outer:first-child {
+#cziddnxecp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fzqpseonhd .gt_column_spanner_outer:last-child {
+#cziddnxecp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fzqpseonhd .gt_column_spanner {
+#cziddnxecp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -272,11 +292,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#fzqpseonhd .gt_spanner_row {
+#cziddnxecp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fzqpseonhd .gt_group_heading {
+#cziddnxecp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -302,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#fzqpseonhd .gt_empty_group_heading {
+#cziddnxecp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -317,15 +337,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#fzqpseonhd .gt_from_md > :first-child {
+#cziddnxecp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fzqpseonhd .gt_from_md > :last-child {
+#cziddnxecp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fzqpseonhd .gt_row {
+#cziddnxecp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -344,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fzqpseonhd .gt_stub {
+#cziddnxecp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -357,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzqpseonhd .gt_stub_row_group {
+#cziddnxecp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -371,15 +391,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#fzqpseonhd .gt_row_group_first td {
+#cziddnxecp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fzqpseonhd .gt_row_group_first th {
+#cziddnxecp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fzqpseonhd .gt_summary_row {
+#cziddnxecp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -389,16 +409,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzqpseonhd .gt_first_summary_row {
+#cziddnxecp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_first_summary_row.thick {
+#cziddnxecp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fzqpseonhd .gt_last_summary_row {
+#cziddnxecp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -408,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_grand_summary_row {
+#cziddnxecp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -418,7 +438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzqpseonhd .gt_first_grand_summary_row {
+#cziddnxecp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -428,7 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_last_grand_summary_row_top {
+#cziddnxecp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -438,11 +458,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_striped {
+#cziddnxecp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fzqpseonhd .gt_table_body {
+#cziddnxecp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -451,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_footnotes {
+#cziddnxecp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -465,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_footnote {
+#cziddnxecp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -474,7 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzqpseonhd .gt_sourcenotes {
+#cziddnxecp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -488,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzqpseonhd .gt_sourcenote {
+#cziddnxecp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -496,63 +516,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzqpseonhd .gt_left {
+#cziddnxecp .gt_left {
   text-align: left;
 }
 
-#fzqpseonhd .gt_center {
+#cziddnxecp .gt_center {
   text-align: center;
 }
 
-#fzqpseonhd .gt_right {
+#cziddnxecp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fzqpseonhd .gt_font_normal {
+#cziddnxecp .gt_font_normal {
   font-weight: normal;
 }
 
-#fzqpseonhd .gt_font_bold {
+#cziddnxecp .gt_font_bold {
   font-weight: bold;
 }
 
-#fzqpseonhd .gt_font_italic {
+#cziddnxecp .gt_font_italic {
   font-style: italic;
 }
 
-#fzqpseonhd .gt_super {
+#cziddnxecp .gt_super {
   font-size: 65%;
 }
 
-#fzqpseonhd .gt_footnote_marks {
+#cziddnxecp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fzqpseonhd .gt_asterisk {
+#cziddnxecp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fzqpseonhd .gt_indent_1 {
+#cziddnxecp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fzqpseonhd .gt_indent_2 {
+#cziddnxecp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fzqpseonhd .gt_indent_3 {
+#cziddnxecp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fzqpseonhd .gt_indent_4 {
+#cziddnxecp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fzqpseonhd .gt_indent_5 {
+#cziddnxecp .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -577,32 +597,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>This table results indicate that <code>Male</code> faculty members have salary <span class="math inline">\(\$14088\)</span> higher than <code>Female</code> faculty if other variables are not included (or in technical jargon are not controlled for).</p>
-<p><strong>If base category is <code>Female</code>, results are same but in regression their signs get changed while analysis does not change. </strong></p>
+<p><strong>If base category is <code>Female</code>, results are same but in regression their signs get changed while analysis does not change.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Salaries <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">relevel</span>(sex, <span class="at">ref =</span> <span class="st">"Male"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">|&gt;</span> </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_salary=</span><span class="fu">mean</span>(salary)) <span class="sc">|&gt;</span> </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Salaries <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">relevel</span>(sex, <span class="at">ref =</span> <span class="st">"Male"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_salary=</span><span class="fu">mean</span>(salary)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="jclmutwust" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jclmutwust table {
+<div id="ifasblxrho" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ifasblxrho table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jclmutwust thead, #jclmutwust tbody, #jclmutwust tfoot, #jclmutwust tr, #jclmutwust td, #jclmutwust th {
+#ifasblxrho thead, #ifasblxrho tbody, #ifasblxrho tfoot, #ifasblxrho tr, #ifasblxrho td, #ifasblxrho th {
   border-style: none;
 }
 
-#jclmutwust p {
+#ifasblxrho p {
   margin: 0;
   padding: 0;
 }
 
-#jclmutwust .gt_table {
+#ifasblxrho .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -628,12 +648,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#jclmutwust .gt_caption {
+#ifasblxrho .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jclmutwust .gt_title {
+#ifasblxrho .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -645,7 +665,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#jclmutwust .gt_subtitle {
+#ifasblxrho .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -657,7 +677,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#jclmutwust .gt_heading {
+#ifasblxrho .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -669,13 +689,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jclmutwust .gt_bottom_border {
+#ifasblxrho .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jclmutwust .gt_col_headings {
+#ifasblxrho .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -690,7 +710,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jclmutwust .gt_col_heading {
+#ifasblxrho .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -710,7 +730,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jclmutwust .gt_column_spanner_outer {
+#ifasblxrho .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -722,15 +742,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#jclmutwust .gt_column_spanner_outer:first-child {
+#ifasblxrho .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jclmutwust .gt_column_spanner_outer:last-child {
+#ifasblxrho .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jclmutwust .gt_column_spanner {
+#ifasblxrho .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -742,11 +762,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#jclmutwust .gt_spanner_row {
+#ifasblxrho .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jclmutwust .gt_group_heading {
+#ifasblxrho .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -772,7 +792,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#jclmutwust .gt_empty_group_heading {
+#ifasblxrho .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -787,15 +807,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#jclmutwust .gt_from_md > :first-child {
+#ifasblxrho .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jclmutwust .gt_from_md > :last-child {
+#ifasblxrho .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jclmutwust .gt_row {
+#ifasblxrho .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -814,7 +834,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jclmutwust .gt_stub {
+#ifasblxrho .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -827,7 +847,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jclmutwust .gt_stub_row_group {
+#ifasblxrho .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -841,15 +861,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#jclmutwust .gt_row_group_first td {
+#ifasblxrho .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jclmutwust .gt_row_group_first th {
+#ifasblxrho .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jclmutwust .gt_summary_row {
+#ifasblxrho .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -859,16 +879,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jclmutwust .gt_first_summary_row {
+#ifasblxrho .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jclmutwust .gt_first_summary_row.thick {
+#ifasblxrho .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jclmutwust .gt_last_summary_row {
+#ifasblxrho .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -878,7 +898,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jclmutwust .gt_grand_summary_row {
+#ifasblxrho .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -888,7 +908,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jclmutwust .gt_first_grand_summary_row {
+#ifasblxrho .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -898,7 +918,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#jclmutwust .gt_last_grand_summary_row_top {
+#ifasblxrho .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -908,11 +928,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jclmutwust .gt_striped {
+#ifasblxrho .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jclmutwust .gt_table_body {
+#ifasblxrho .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -921,7 +941,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jclmutwust .gt_footnotes {
+#ifasblxrho .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -935,7 +955,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jclmutwust .gt_footnote {
+#ifasblxrho .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -944,7 +964,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jclmutwust .gt_sourcenotes {
+#ifasblxrho .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -958,7 +978,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jclmutwust .gt_sourcenote {
+#ifasblxrho .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -966,63 +986,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jclmutwust .gt_left {
+#ifasblxrho .gt_left {
   text-align: left;
 }
 
-#jclmutwust .gt_center {
+#ifasblxrho .gt_center {
   text-align: center;
 }
 
-#jclmutwust .gt_right {
+#ifasblxrho .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jclmutwust .gt_font_normal {
+#ifasblxrho .gt_font_normal {
   font-weight: normal;
 }
 
-#jclmutwust .gt_font_bold {
+#ifasblxrho .gt_font_bold {
   font-weight: bold;
 }
 
-#jclmutwust .gt_font_italic {
+#ifasblxrho .gt_font_italic {
   font-style: italic;
 }
 
-#jclmutwust .gt_super {
+#ifasblxrho .gt_super {
   font-size: 65%;
 }
 
-#jclmutwust .gt_footnote_marks {
+#ifasblxrho .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jclmutwust .gt_asterisk {
+#ifasblxrho .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jclmutwust .gt_indent_1 {
+#ifasblxrho .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jclmutwust .gt_indent_2 {
+#ifasblxrho .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jclmutwust .gt_indent_3 {
+#ifasblxrho .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jclmutwust .gt_indent_4 {
+#ifasblxrho .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jclmutwust .gt_indent_5 {
+#ifasblxrho .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1051,20 +1071,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="regression-analysis">Regression analysis</h2>
 <p>Now same analysis with regression model is as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>SLR <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex, <span class="at">data=</span>Salaries)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(SLR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a>SLR <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex, <span class="at">data=</span>Salaries)</span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(SLR)</span>
+<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-4-4" class="code-annotation-target"><a href="#annotated-cell-4-4" aria-hidden="true" tabindex="-1"></a>Sal <span class="ot">&lt;-</span> Salaries <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">relevel</span>(sex, <span class="at">ref =</span> <span class="st">"Male"</span>))</span>
+<span id="annotated-cell-4-5"><a href="#annotated-cell-4-5" aria-hidden="true" tabindex="-1"></a> </span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-4-6" class="code-annotation-target"><a href="#annotated-cell-4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(salary <span class="sc">~</span> sex, <span class="at">data=</span>Sal) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-lines="4" data-code-cell="annotated-cell-4" data-code-annotation="1">Instead of using <code>Male</code> as base line, I am using <code>Female</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-lines="6" data-code-cell="annotated-cell-4" data-code-annotation="2">model data and get results using tidy()</span>
+</dd>
+</dl>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term        estimate std.error statistic  p.value
   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
 1 (Intercept)  101002.     4809.     21.0  2.68e-66
-2 sexMale       14088.     5065.      2.78 5.67e- 3</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Sal <span class="ot">&lt;-</span> Salaries <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">relevel</span>(sex, <span class="at">ref =</span> <span class="st">"Male"</span>))</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(salary <span class="sc">~</span> sex, <span class="at">data=</span>Sal) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
+2 sexMale       14088.     5065.      2.78 5.67e- 3
+# A tibble: 2 × 5
   term        estimate std.error statistic   p.value
   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
 1 (Intercept)  115090.     1587.     72.5  2.46e-230
@@ -1076,28 +1107,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="table-with-sex-and-discipline">Table with sex and discipline</h2>
 <p>Now I add another variable which is <code>discipline</code> and see how <code>Male</code> and <code>Female</code> faculty earnings change by discipline.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Salaries <span class="sc">|&gt;</span> <span class="fu">group_by</span>(sex, discipline) <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_salary=</span><span class="fu">mean</span>(salary)) <span class="sc">|&gt;</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Salaries <span class="sc">|&gt;</span> <span class="fu">group_by</span>(sex, discipline) <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_salary=</span><span class="fu">mean</span>(salary)) <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="wguehkepjc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wguehkepjc table {
+<div id="uqxwzmmshy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uqxwzmmshy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wguehkepjc thead, #wguehkepjc tbody, #wguehkepjc tfoot, #wguehkepjc tr, #wguehkepjc td, #wguehkepjc th {
+#uqxwzmmshy thead, #uqxwzmmshy tbody, #uqxwzmmshy tfoot, #uqxwzmmshy tr, #uqxwzmmshy td, #uqxwzmmshy th {
   border-style: none;
 }
 
-#wguehkepjc p {
+#uqxwzmmshy p {
   margin: 0;
   padding: 0;
 }
 
-#wguehkepjc .gt_table {
+#uqxwzmmshy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1123,12 +1154,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_caption {
+#uqxwzmmshy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wguehkepjc .gt_title {
+#uqxwzmmshy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1140,7 +1171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#wguehkepjc .gt_subtitle {
+#uqxwzmmshy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1152,7 +1183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#wguehkepjc .gt_heading {
+#uqxwzmmshy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1164,13 +1195,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_bottom_border {
+#uqxwzmmshy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_col_headings {
+#uqxwzmmshy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1185,7 +1216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_col_heading {
+#uqxwzmmshy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1205,7 +1236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wguehkepjc .gt_column_spanner_outer {
+#uqxwzmmshy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1217,15 +1248,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#wguehkepjc .gt_column_spanner_outer:first-child {
+#uqxwzmmshy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wguehkepjc .gt_column_spanner_outer:last-child {
+#uqxwzmmshy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wguehkepjc .gt_column_spanner {
+#uqxwzmmshy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1237,11 +1268,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#wguehkepjc .gt_spanner_row {
+#uqxwzmmshy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wguehkepjc .gt_group_heading {
+#uqxwzmmshy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1267,7 +1298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#wguehkepjc .gt_empty_group_heading {
+#uqxwzmmshy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1282,15 +1313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#wguehkepjc .gt_from_md > :first-child {
+#uqxwzmmshy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wguehkepjc .gt_from_md > :last-child {
+#uqxwzmmshy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wguehkepjc .gt_row {
+#uqxwzmmshy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1309,7 +1340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wguehkepjc .gt_stub {
+#uqxwzmmshy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1322,7 +1353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wguehkepjc .gt_stub_row_group {
+#uqxwzmmshy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1336,15 +1367,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#wguehkepjc .gt_row_group_first td {
+#uqxwzmmshy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wguehkepjc .gt_row_group_first th {
+#uqxwzmmshy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wguehkepjc .gt_summary_row {
+#uqxwzmmshy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1354,16 +1385,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wguehkepjc .gt_first_summary_row {
+#uqxwzmmshy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_first_summary_row.thick {
+#uqxwzmmshy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wguehkepjc .gt_last_summary_row {
+#uqxwzmmshy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1373,7 +1404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_grand_summary_row {
+#uqxwzmmshy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1383,7 +1414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wguehkepjc .gt_first_grand_summary_row {
+#uqxwzmmshy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1393,7 +1424,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_last_grand_summary_row_top {
+#uqxwzmmshy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1403,11 +1434,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_striped {
+#uqxwzmmshy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wguehkepjc .gt_table_body {
+#uqxwzmmshy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1416,7 +1447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_footnotes {
+#uqxwzmmshy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1430,7 +1461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_footnote {
+#uqxwzmmshy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1439,7 +1470,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wguehkepjc .gt_sourcenotes {
+#uqxwzmmshy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1453,7 +1484,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wguehkepjc .gt_sourcenote {
+#uqxwzmmshy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1461,63 +1492,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wguehkepjc .gt_left {
+#uqxwzmmshy .gt_left {
   text-align: left;
 }
 
-#wguehkepjc .gt_center {
+#uqxwzmmshy .gt_center {
   text-align: center;
 }
 
-#wguehkepjc .gt_right {
+#uqxwzmmshy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wguehkepjc .gt_font_normal {
+#uqxwzmmshy .gt_font_normal {
   font-weight: normal;
 }
 
-#wguehkepjc .gt_font_bold {
+#uqxwzmmshy .gt_font_bold {
   font-weight: bold;
 }
 
-#wguehkepjc .gt_font_italic {
+#uqxwzmmshy .gt_font_italic {
   font-style: italic;
 }
 
-#wguehkepjc .gt_super {
+#uqxwzmmshy .gt_super {
   font-size: 65%;
 }
 
-#wguehkepjc .gt_footnote_marks {
+#uqxwzmmshy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wguehkepjc .gt_asterisk {
+#uqxwzmmshy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wguehkepjc .gt_indent_1 {
+#uqxwzmmshy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wguehkepjc .gt_indent_2 {
+#uqxwzmmshy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wguehkepjc .gt_indent_3 {
+#uqxwzmmshy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wguehkepjc .gt_indent_4 {
+#uqxwzmmshy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wguehkepjc .gt_indent_5 {
+#uqxwzmmshy .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1555,9 +1586,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="regression-with-same-data" class="level2">
 <h2 class="anchored" data-anchor-id="regression-with-same-data">Regression with same data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>MLR <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex <span class="sc">+</span> discipline, <span class="at">data =</span> Salaries)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(MLR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>MLR <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex <span class="sc">+</span> discipline, <span class="at">data =</span> Salaries)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(MLR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term        estimate std.error statistic  p.value
@@ -1569,8 +1600,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>In this regression <code>coefficients</code> on <code>sexMale</code> indicate <code>Male</code> earnings vs <code>Female</code> but not answering question what if <code>Male</code> is from <code>disciplineA</code> or <code>disciplineB</code> as was obvious from the table where both sex and discipline results are obvious. This will be answered in the following regression equation. ## Interaction variable regression</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ILR <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex <span class="sc">+</span> discipline <span class="sc">+</span> sex<span class="sc">*</span> discipline, <span class="at">data=</span>Salaries)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(ILR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ILR <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex <span class="sc">+</span> discipline <span class="sc">+</span> sex<span class="sc">*</span> discipline, <span class="at">data=</span>Salaries)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(ILR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   term                estimate std.error statistic  p.value
@@ -1587,10 +1618,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="why-regression-when-table-is-so-easy">Why regression when table is so easy</h2>
 <p>Question is why one needs to do regression analysis if table results are so simple and easy. If one has one or two variables, then of course, table is simple and specially if they are binary or categorical. But as either number of variables increase and are continuous, then doing analysis with tables is quite messy. For example if we have to add some more variables in our regression table which include may include <code>rank</code> of a faculty, <code>years since phd</code> and<code>years in service</code>, doing tabular analysis will be very messy and interpreting results will no more be an easy taks.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>long_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex <span class="sc">+</span> discipline <span class="sc">+</span> sex<span class="sc">*</span>discipline <span class="sc">+</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                   rank <span class="sc">+</span> yrs.since.phd <span class="sc">+</span> yrs.service, <span class="at">data =</span> Salaries)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(long_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>long_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> sex <span class="sc">+</span> discipline <span class="sc">+</span> sex<span class="sc">*</span>discipline <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                   rank <span class="sc">+</span> yrs.since.phd <span class="sc">+</span> yrs.service, <span class="at">data =</span> Salaries)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(long_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 5
   term                estimate std.error statistic  p.value
@@ -1609,7 +1640,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="all-regression" class="level2">
 <h2 class="anchored" data-anchor-id="all-regression">All regression</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(<span class="fu">list</span>(SLR, MLR, ILR, long_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(<span class="fu">list</span>(SLR, MLR, ILR, long_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>

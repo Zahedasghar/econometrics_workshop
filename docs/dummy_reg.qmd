@@ -27,18 +27,16 @@ editor: visual
 ##  {.title}
 
 ::: r-fit-text
-### [Regression with interaction variables]{.flow} 
+### [Regression with interaction variables]{.flow}
 :::
 
 ::: {style="font-size: 20px"}
 Zahid Asghar, QAU, Islamabad
 :::
 
-
 ## Regression and Summary tables
 
-In this post I am going to discuss why do we need interaction of variables in regression variables in a simple way. I restrict myself to only a `case` where only independent variables are binary at the first stage.
-Following are the `libraries` we need to run and do analysis.
+In this post I am going to discuss why do we need interaction of variables in regression variables in a simple way. I restrict myself to only a `case` where only independent variables are binary at the first stage. Following are the `libraries` we need to run and do analysis.
 
 ```{r}
 library(tidyverse) ## A set of packages required to run analysis
@@ -52,22 +50,25 @@ library(modelsummary)## For nice regression output
 ```
 
 ## Simple Tabular Analysis
+
 I am going calculate `mean` salary of `Male` and `Female` faculty as follows:
 
 ```{r}
-Salaries |> 
-  group_by(sex) |> 
-  summarise(avg_salary=mean(salary)) |> 
-  gt()
+Salaries |> #<1>
+  group_by(sex) |> #<2>
+  summarise(avg_salary=mean(salary)) |> #<3>
+  gt() #<4>
 
 ```
 
-
+1.  Read Salaries data then use `pipe` operator
+2.  group data by gender , use `pipe` opertor ( I read as pipe operator as `THEN`)
+3.  summarise data , THEN
+4.  use it as a nice table as `gt()`
 
 This table results indicate that `Male` faculty members have salary $\$14088$ higher than `Female` faculty if other variables are not included (or in technical jargon are not controlled for).
 
-
-**If base category is `Female`, results are same but in regression their signs get changed while analysis does not change. **
+**If base category is `Female`, results are same but in regression their signs get changed while analysis does not change.**
 
 ```{r}
 Salaries |> 
@@ -85,15 +86,18 @@ Now same analysis with regression model is as follows:
 SLR <- lm(salary ~ sex, data=Salaries)
 tidy(SLR)
 
-Sal <- Salaries |> mutate(sex = relevel(sex, ref = "Male"))
+Sal <- Salaries |> mutate(sex = relevel(sex, ref = "Male")) #<1>
  
-lm(salary ~ sex, data=Sal) |> tidy()
+lm(salary ~ sex, data=Sal) |> tidy()  #<2>
 
 ```
 
+1.  Instead of using `Male` as base line, I am using `Female`
+2.  model data and get results using tidy()
+
 ## Table with sex and discipline
 
-Now I add another variable which is   `discipline` and see how `Male` and `Female` faculty earnings change by discipline.
+Now I add another variable which is `discipline` and see how `Male` and `Female` faculty earnings change by discipline.
 
 ```{r}
 
@@ -114,22 +118,18 @@ tidy(MLR)
 
 ```
 
-In this regression `coefficients` on `sexMale` indicate `Male` earnings vs `Female` but not answering question what if `Male` is from `disciplineA` or `disciplineB` as was obvious from the table where both sex and discipline results are obvious.
-This will be answered in the following regression equation.
-## Interaction variable regression
+In this regression `coefficients` on `sexMale` indicate `Male` earnings vs `Female` but not answering question what if `Male` is from `disciplineA` or `disciplineB` as was obvious from the table where both sex and discipline results are obvious. This will be answered in the following regression equation. \## Interaction variable regression
 
 ```{r}
 ILR <- lm(salary ~ sex + discipline + sex* discipline, data=Salaries)
 tidy(ILR)
 ```
 
-Now these results answer our all the questions:
-A `Female` from `disciplineA` earns $\$ 89064.94$ per year while  `Female` from `DisciplineB` earns $\$ 89064.94$+ $\$22169.58$ equal to `r 89064.94+ 22169.58`, as second and fourth coefficient will be zero.
-`Male` with `disciplineA` earns $\$ 89064.94$ + $\$21635.04$ while `Male` with `DisciplineB` earns equal to sum of all these coefficients as it means `Male` and `DisciplineB` are equal to $1$ , therefore their interaction will also be $1$. So now compare these results with tabular results, both will be exactly same.
+Now these results answer our all the questions: A `Female` from `disciplineA` earns $\$ 89064.94$ per year while `Female` from `DisciplineB` earns $\$ 89064.94$+ $\$22169.58$ equal to `r 89064.94+ 22169.58`, as second and fourth coefficient will be zero. `Male` with `disciplineA` earns $\$ 89064.94$ + $\$21635.04$ while `Male` with `DisciplineB` earns equal to sum of all these coefficients as it means `Male` and `DisciplineB` are equal to $1$ , therefore their interaction will also be $1$. So now compare these results with tabular results, both will be exactly same.
 
 ## Why regression when table is so easy
-Question is why one needs to do regression analysis if table results are so simple and easy. If one has one or two variables, then of course, table is simple and specially if they are binary or categorical. But as either number of variables increase and are continuous, then doing analysis with tables is quite messy. 
-For example if we have to add some more variables in our regression table which include   may include `rank` of a faculty, `years since phd` and`years in service`, doing tabular analysis will be very messy and interpreting results will no more be an easy taks. 
+
+Question is why one needs to do regression analysis if table results are so simple and easy. If one has one or two variables, then of course, table is simple and specially if they are binary or categorical. But as either number of variables increase and are continuous, then doing analysis with tables is quite messy. For example if we have to add some more variables in our regression table which include may include `rank` of a faculty, `years since phd` and`years in service`, doing tabular analysis will be very messy and interpreting results will no more be an easy taks.
 
 ```{r}
 long_model <- lm(salary ~ sex + discipline + sex*discipline +
@@ -141,7 +141,6 @@ tidy(long_model)
 
 ## All regression
 
-
 ```{r}
 modelsummary(list(SLR, MLR, ILR, long_model))
 
@@ -149,4 +148,3 @@ modelsummary(list(SLR, MLR, ILR, long_model))
 
 
 ```
-
