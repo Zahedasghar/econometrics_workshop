@@ -31,11 +31,14 @@ editor: visual
 :::
 
 ::: {style="font-size: 20px"}
-Zahid Asghar
+Zahid Asghar, QAU, Islamabad
 :::
 
 
 ## Regression and Summary tables
+
+In this post I am going to discuss why do we need interaction of variables in regression variables in a simple way. I restrict myself to only a `case` where only independent variables are binary at the first stage.
+Following are the `libraries` we need to run and do analysis.
 
 ```{r}
 library(tidyverse) ## A set of packages required to run analysis
@@ -49,6 +52,7 @@ library(modelsummary)## For nice regression output
 ```
 
 ## Simple Tabular Analysis
+I am going calculate `mean` salary of `Male` and `Female` faculty as follows:
 
 ```{r}
 Salaries |> 
@@ -59,10 +63,8 @@ Salaries |>
 ```
 
 
-I am using Salary data and one variable `salary` grouped by `sex`
 
-
-This indicate that `Male` faculty members have salary $\$14088$ higher than `Female` faculty if other variables are not included (or in technical jargon are not controlled for).
+This table results indicate that `Male` faculty members have salary $\$14088$ higher than `Female` faculty if other variables are not included (or in technical jargon are not controlled for).
 
 
 **If base category is `Female`, results are same but in regression their signs get changed while analysis does not change. **
@@ -74,8 +76,10 @@ mutate(sex = relevel(sex, ref = "Male")) |>
   summarise(avg_salary=mean(salary)) |> 
   gt()
 ```
+
 ## Regression analysis
-Now same analysis with regression
+
+Now same analysis with regression model is as follows:
 
 ```{r}
 SLR <- lm(salary ~ sex, data=Salaries)
