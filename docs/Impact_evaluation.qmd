@@ -11,7 +11,7 @@ format:
     transition: fade
     background-transition: fade
     chalkboard: true
-    highlight-style: pygments
+    highlight-style: dracula
     footer: "https://zahedasghar.netlify.app"
     #title-slide-attributes:
       #data-background-image: images/hexes.png

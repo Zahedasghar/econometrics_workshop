@@ -6,6 +6,7 @@ footer: "[Zahid Asghar](https://zahidasghar.com)"
 logo: "images/soe_logo.jpg"
 author: "[[By Atomcamp](https://www.atomcamp.com/)]{.yellow}"
 date: ""
+highlight-style: dracula
 format:
   revealjs:  
     slide-number: true

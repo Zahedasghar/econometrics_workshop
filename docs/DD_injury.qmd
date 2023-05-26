@@ -62,6 +62,7 @@ library(tidyverse)  # ggplot(), %>%, mutate(), and friends
 library(broom)  # Convert models to data frames
 library(scales)  # Format numbers with functions like comma(), percent(), and dollar()
 library(modelsummary)  # Create side-by-side regression tables
+library(wooldridge) # Data sets used by wooldridge are available
 ```
 
 ```{r load-data-fake, eval=FALSE}
@@ -78,7 +79,7 @@ injury_raw <- read_csv(here::here("docs", "data", "injury.csv"))
 Next we'll clean up the `injury_raw` data a little to limit the data to just observations from Kentucky. we'll also rename some awkwardly-named columns:
 
 ```{r clean-data}
-injury <- injury_raw %>%
+injury <- injury_raw %>%     
   filter(ky == 1) %>%
   # The syntax for rename is `new_name = original_name`
   rename(duration = durat, log_duration = ldurat,
